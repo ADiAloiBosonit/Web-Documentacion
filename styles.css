@@ -1,0 +1,36 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    display: flex;
+    background-color: #7B7263;
+}
+#navbar{
+    flex-direction: column;
+    color: #C6CA53;
+    font-size: 1.6em;
+}
+
+#navbar > ul {
+    size: 16px;
+    padding: 10px;
+    list-style-type: none;
+}
+
+#navbar li {
+    margin: 15px;
+}
+
+#main-doc {
+    color: #C8D383;
+    padding: 25px;
+}
+
+#main-doc p{
+    padding: 10px;
+}
+
+#main-doc header{
+    font-size: 20px;
+    color: #C9DCB3;
+}
