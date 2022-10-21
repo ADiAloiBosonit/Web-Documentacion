@@ -26,8 +26,16 @@ body{
     padding: 25px;
 }
 
+section > article > code{
+    background-color: #171819;
+    width: 100%;
+    padding: 10px;
+    display: block !important;
+}
 #main-doc p{
     padding: 10px;
+    display: block;
+    margin: 1em 1em 0px 0px;
 }
 
 #main-doc header{

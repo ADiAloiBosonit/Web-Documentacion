@@ -7,8 +7,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
-      rel="stylesheet"/>
-      <link rel="stylesheet" href="styles.css">
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
@@ -30,48 +31,84 @@
     </nav>
     <main id="main-doc">
       <section class="main-section" id="Inicio">
-        <header>Inicio</header>
+        <header><h1>Inicio</h1></header>
         <article>
-            <p>
-                Welcome to the documentation for the client-side API of Foundry Virtual Tabletop, a JavaScript application for running tabletop role-playing games within a self-hosted web framework.
-                The goal of this documentation is to empower developers to create amazing game systems, add-on modules, and scripts which augment and extend the base functionality of the Foundry Virtual Tabletop platform.
-            </p>
+          <p>
+            Welcome to the documentation for the client-side API of Foundry
+            Virtual Tabletop, a JavaScript application for running tabletop
+            role-playing games within a self-hosted web framework. The goal of
+            this documentation is to empower developers to create amazing game
+            systems, add-on modules, and scripts which augment and extend the
+            base functionality of the Foundry Virtual Tabletop platform.
+          </p>
         </article>
       </section>
       <section class="main-section" id="Documentos_Primarios">
-        <header>Documentos Primarios</header>
-        <article></article>
+        <header><h1>Documentos primarios</h1></header>
+        <article>
+          <p>
+            Data in Foundry Virtual Tabletop is organized around the concept of
+            Documents. Each document represents a single coherent piece of data
+            which represents a specific object within the framework. The term
+            Document refers to both the definition of a specific type of data
+            (the Document class) as well as a uniquely identified instance of
+            that data type (an instance of that class).
+          </p>
+        </article>
       </section>
       <section class="main-section" id="Actor">
-        <header>Actor</header>
-        <article></article>
+        <header><h1>Actor</h1></header>
+        <article>
+          <p>
+            The client-side Actor document which extends the common BaseActor
+            model.
+          </p>
+          <p>Create new actor</p>
+          <code class="language-js"
+            ><span class="hl-1">let</span><span class="hl-3"> </span
+            ><span class="hl-2">actor</span><span class="hl-3"> = </span
+            ><span class="hl-7">await</span><span class="hl-3"> </span
+            ><span class="hl-2">Actor</span><span class="hl-3">.</span
+            ><span class="hl-4">create</span><span class="hl-3">({</span
+            ><br /><span class="hl-3"> </span><span class="hl-2">name:</span
+            ><span class="hl-3"> </span
+            ><span class="hl-6">"New Test Actor"</span
+            ><span class="hl-3">,</span><br /><span class="hl-3"> </span
+            ><span class="hl-2">type:</span><span class="hl-3"> </span
+            ><span class="hl-6">"character"</span><span class="hl-3">,</span
+            ><br /><span class="hl-3"> </span><span class="hl-2">img:</span
+            ><span class="hl-3"> </span
+            ><span class="hl-6">"artwork/character-profile.jpg"</span
+            ><br /><span class="hl-3">});</span>
+          </code>
+        </article>
       </section>
       <section class="main-section" id="Chat">
-        <header>Chat</header>
+        <header><h1>Chat</h1></header>
         <article></article>
       </section>
       <section class="main-section" id="Combate">
-        <header>Combate</header>
+        <header><h1>Combate</h1></header>
         <article></article>
       </section>
       <section class="main-section" id="Item">
-        <header>Item</header>
+        <header><h1>Item</h1></header>
         <article></article>
       </section>
       <section class="main-section" id="Exploracion">
-        <header>Exploracion</header>
+        <header><h1>Exploracion</h1></header>
         <article></article>
       </section>
       <section class="main-section" id="Carpetas">
-        <header>Carpetas</header>
+        <header><h1>Carpetas</h1></header>
         <article></article>
       </section>
       <section class="main-section" id="Entradas_Diario">
-        <header>Entradas Diario</header>
+        <header><h1>Entradas diario</h1></header>
         <article></article>
       </section>
       <section class="main-section" id="Macros">
-        <header>Macros</header>
+        <header><h1>Macros</h1></header>
         <article></article>
       </section>
     </main>
