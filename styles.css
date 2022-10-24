@@ -1,9 +1,14 @@
 *{
     font-family: 'Quicksand', sans-serif;
 }
+
 body{
     display: flex;
     background-color: #7B7263;
+}
+li{
+    color: #C9DCB3;
+    text-decoration: none;
 }
 #navbar{
     flex-direction: column;
@@ -24,6 +29,15 @@ body{
 #main-doc {
     color: #C8D383;
     padding: 25px;
+}
+a, a:link{
+    text-decoration: none;
+    color: inherit;
+}
+dt{
+    color: #d3cfc9;
+    border-color: #3a3e41;
+    border-radius: 4px;
 }
 
 section > article > code{

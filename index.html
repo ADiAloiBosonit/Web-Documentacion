@@ -17,16 +17,16 @@
     <nav id="navbar">
       <header>Documentación de Foundry VTT</header>
       <ul>
-        <li>Inicio</li>
-        <li>Documentos Primarios</li>
-        <li>Actor</li>
-        <li>Chat</li>
-        <li>Combate</li>
-        <li>Item</li>
-        <li>Exploracion</li>
-        <li>Carpetas</li>
-        <li>Entradas Diario</li>
-        <li>Macros</li>
+        <li><a class="nav-link" href="#Inicio">Inicio</a></li>
+        <li><a class="nav-link" href="#Documentos_Primarios">Documentos Primarios</a></li>
+        <li><a class="nav-link" href="#Actor">Actor</a></li>
+        <li><a class="nav-link" href="#Chat">Chat</a></li>
+        <li><a class="nav-link" href="#Combate">Combate</a></li>
+        <li><a class="nav-link" href="#Item">Item</a></li>
+        <li><a class="nav-link" href="#Exploracion">Exploracion</a></li>
+        <li><a class="nav-link" href="#Carpetas">Carpetas</a></li>
+        <li><a class="nav-link" href="#Entradas_Diario">Entradas Diario</a></li>
+        <li><a class="nav-link" href="#Macros">Macros</a></li>
       </ul>
     </nav>
     <main id="main-doc">
@@ -64,52 +64,123 @@
             model.
           </p>
           <p>Create new actor</p>
-          <code class="language-js"
-            ><span class="hl-1">let</span><span class="hl-3"> </span
-            ><span class="hl-2">actor</span><span class="hl-3"> = </span
-            ><span class="hl-7">await</span><span class="hl-3"> </span
-            ><span class="hl-2">Actor</span><span class="hl-3">.</span
-            ><span class="hl-4">create</span><span class="hl-3">({</span
-            ><br /><span class="hl-3"> </span><span class="hl-2">name:</span
-            ><span class="hl-3"> </span
-            ><span class="hl-6">"New Test Actor"</span
-            ><span class="hl-3">,</span><br /><span class="hl-3"> </span
-            ><span class="hl-2">type:</span><span class="hl-3"> </span
-            ><span class="hl-6">"character"</span><span class="hl-3">,</span
-            ><br /><span class="hl-3"> </span><span class="hl-2">img:</span
-            ><span class="hl-3"> </span
-            ><span class="hl-6">"artwork/character-profile.jpg"</span
-            ><br /><span class="hl-3">});</span>
+          <code class="language-js">
+            let actor = await Actor.create({<br />
+            name: "New Test Actor",<br />
+            type: "character",<br />
+            img: "artwork/character-profile.jpg"<br />});
           </code>
         </article>
       </section>
       <section class="main-section" id="Chat">
         <header><h1>Chat</h1></header>
-        <article></article>
+        <article>
+          <p>
+            The Document definition for a ChatMessage. Defines the DataSchema
+            and common behaviors for a ChatMessage which are shared between both
+            client and server.
+          </p>
+          <ul>
+            <li>
+              BaseChatMessage - The base ChatMessage model definition which
+              defines common behavior of an ChatMessage document between both
+              client and server.
+            </li>
+            <li>
+              ChatMessage - The client-side ChatMessage document which extends
+              the common BaseChatMessage model.
+            </li>
+          </ul>
+        </article>
       </section>
       <section class="main-section" id="Combate">
         <header><h1>Combate</h1></header>
-        <article></article>
+        <article>
+          <p>
+            The Document definition for a Combat. Defines the DataSchema and
+            common behaviors for a Combat which are shared between both client
+            and server.
+          </p>
+        </article>
       </section>
       <section class="main-section" id="Item">
         <header><h1>Item</h1></header>
-        <article></article>
+        <article>
+          <p>
+            The Document definition for an Item. Defines the DataSchema and
+            common behaviors for an Item which are shared between both client
+            and server.
+          </p>
+        </article>
       </section>
       <section class="main-section" id="Exploracion">
         <header><h1>Exploracion</h1></header>
-        <article></article>
+        <article>
+          <p>
+            The Document definition for FogExploration. Defines the DataSchema
+            and common behaviors for FogExploration which are shared between
+            both client and server.
+          </p>
+
+          <code>
+            get([query]?: { scene: string; user: string }, options?: any):
+            Promise
+          </code>
+        </article>
       </section>
       <section class="main-section" id="Carpetas">
         <header><h1>Carpetas</h1></header>
-        <article></article>
+        <article>
+          <p>
+            The Document definition for a Folder. Defines the DataSchema and
+            common behaviors for a Folder which are shared between both client
+            and server.
+          </p>
+
+          <code>
+            defineSchema(): { _id: DocumentIdField; name: StringField; type:
+            StringField; description: StringField; folder: ForeignDocumentField;
+            sorting: StringField; sort: IntegerSortField; color: ColorField;
+            flags: ObjectField; _stats: DocumentStatsField }</code
+          >
+        </article>
       </section>
       <section class="main-section" id="Entradas_Diario">
         <header><h1>Entradas diario</h1></header>
-        <article></article>
+        <article>
+          <p>
+            The Document definition for a JournalEntry. Defines the DataSchema
+            and common behaviors for a JournalEntry which are shared between
+            both client and server.
+          </p>
+          <ul>
+            <li>BaseJournalEntry - The base JournalEntry model definition which defines common behavior of an JournalEntry document between both client and server.</li>
+            <li>JournalEntry - The client-side JournalEntry document which extends the common BaseJournalEntry model.</li>
+            <li>Journal - The singleton collection of JournalEntry documents which exist within the active World.</li>
+            <li>JournalSheet - The Application responsible for displaying and editing a single JournalEntry document.</li>
+            <li>JournalDirectory - The sidebar directory which organizes and displays world-level JournalEntry documents.</li>
+          </ul>
+          <code>
+            defineSchema(): { _id: DocumentIdField; name: StringField; type:
+            StringField; description: StringField; folder: ForeignDocumentField;
+            sorting: StringField; sort: IntegerSortField; color: ColorField;
+            flags: ObjectField; _stats: DocumentStatsField }
+          </code>
+        </article>
       </section>
       <section class="main-section" id="Macros">
         <header><h1>Macros</h1></header>
-        <article></article>
+        <article>
+          <p>
+            The Document definition for a Macro. Defines the DataSchema and
+            common behaviors for a Macro which are shared between both client
+            and server.
+          </p>
+          <code>
+            testUserPermission(user: any, permission: any, __namedParameters?:
+            { exact: boolean }): any
+          </code>
+        </article>
       </section>
     </main>
   </body>
